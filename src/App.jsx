@@ -4,19 +4,17 @@
 // import './App.css'
 
 import Navbar from './Components/nav'
-import Registrer from './Components/Forms/Registration'
-import Login from './Components/Forms/Login'
+
 import Footer from './Components/footer'
+import Card from './Components/Card_pro/card'
 
 function App() {
 
   return (
     <div>
       <Navbar></Navbar>
-      <div className='d-flex justify-content-evenly'>
-        <Login></Login>
-        <Registrer></Registrer>
-      </div>
+      <Card></Card>
+      
       <Footer></Footer>
 
     </div>
