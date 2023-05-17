@@ -4,9 +4,8 @@
 // import './App.css'
 
 import Navbar from './Components/nav'
-
-import Footer from './Components/footer'
 import Card from './Components/Card_pro/card'
+import Footer from './Components/footer'
 
 function App() {
 
