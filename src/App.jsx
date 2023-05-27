@@ -12,6 +12,7 @@ function App() {
   return (
     <div>
       <Navbar></Navbar>
+      {/* Email,contect,address is props */}
       <Card Email="aliabhatt@gmail.com" Contect={9988223344} Address="Mumbai"></Card>
 
       <Footer></Footer>

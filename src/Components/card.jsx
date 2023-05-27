@@ -1,9 +1,12 @@
+// for proptypes only 
 import PropTypes from 'prop-types';
 
 
 
 
+
 function Card(Props) {
+// {Props.field} this is method of use props
 return (
 
         <>
@@ -25,6 +28,7 @@ return (
 }
 
 
+// set proptypes of props
 Card.propTypes = {
     Name : PropTypes.string.isRequired,
     Email : PropTypes.string.isRequired,
@@ -33,6 +37,7 @@ Card.propTypes = {
     Address : PropTypes.string.isRequired
 }
 
+// set default value of props
 Card.defaultProps = {
     Name : "Aryan",
     Qualification : "MBA"
