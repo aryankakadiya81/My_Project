@@ -4,7 +4,7 @@
 // import './App.css'
 
 import Navbar from './Components/nav'
-import Card from './Components/Card_pro/card'
+import Card from './Components/card'
 import Footer from './Components/footer'
 
 function App() {
@@ -12,8 +12,8 @@ function App() {
   return (
     <div>
       <Navbar></Navbar>
-      <Card></Card>
-      
+      <Card Email="aliabhatt@gmail.com" Contect={9988223344} Address="Mumbai"></Card>
+
       <Footer></Footer>
 
     </div>
