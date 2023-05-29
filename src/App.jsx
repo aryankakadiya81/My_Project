@@ -4,7 +4,7 @@
 // import './App.css'
 
 import Navbar from './Components/nav'
-import Card from './Components/card'
+import Texts from './Components/hook(usestate)'
 import Footer from './Components/footer'
 
 function App() {
@@ -12,9 +12,7 @@ function App() {
   return (
     <div>
       <Navbar></Navbar>
-      {/* Email,contect,address is props */}
-      <Card Email="aliabhatt@gmail.com" Contect={9988223344} Address="Mumbai"></Card>
-
+      <Texts place="Enter text"></Texts>
       <Footer></Footer>
 
     </div>
