@@ -4,7 +4,7 @@
 // import './App.css'
 
 import Navbar from './Components/nav'
-import Texts from './Components/hook(usestate)'
+import Cards from './Components/card'
 import Footer from './Components/footer'
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
   return (
     <div>
       <Navbar></Navbar>
-      <Texts place="Enter text"></Texts>
+      <Cards place="Enter text"></Cards>
       <Footer></Footer>
 
     </div>
