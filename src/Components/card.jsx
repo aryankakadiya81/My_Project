@@ -8,11 +8,35 @@ import React, { useState } from 'react';
 
 function Texts(Props) {
 
-    // use state hooks
+    const [style, setStyle] = useState({
+        backgroundColor: "white",
+        color: "black"
+    })
+    const [btnText, setBtnText] = useState("Dark")
+
+    function darkMode() {
+
+        if (style.color == 'white') {
+            setStyle({
+                backgroundColor: "white",
+                color: "black"
+            })
+            setBtnText("Dark")
+        }
+        else{
+            setStyle({
+                backgroundColor: "black",
+                color: "white"
+            })
+            setBtnText("Light")
+
+        }
+    }
+
+
+
+
     const [text, settext] = useState("");
-
-
-    // button function
     function TransferUp() {
         let newText = text.toUpperCase();
         settext(newText);
@@ -40,7 +64,8 @@ function Texts(Props) {
     return (
 
         <>
-            <div className="my-5 d-flex justify-content-center">
+            <div><button className="btn btn-primary m-1" onClick={darkMode}>{btnText}</button></div>
+            <div className="my-5 d-flex justify-content-center" style={style}>
                 <div className='w-75'>
                     <div className=''>
                         <label htmlFor="exampleFormControlTextarea1" className="form-label fw-bold fs-1">
@@ -57,8 +82,8 @@ function Texts(Props) {
                     <div className='container'>
                         <h1>Summery</h1>
                         {/* <p>{text.split(" ").length - 1} words, {text.length} characters</p> */}
-                        {/* <p>{text.split(" ").length} words, {text.length} characters</p> */}
-                        {/* <p>{text.split(" ").length * 0.008}</p> */}
+                        <p>{text.split(" ").length} words, {text.length} characters</p>
+                        <p>{text.split(" ").length * 0.008} Reading Time</p>
                     </div>
                 </div>
             </div>
