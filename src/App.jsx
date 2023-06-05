@@ -6,16 +6,37 @@
 import Navbar from './Components/nav'
 import Cards from './Components/card'
 import Footer from './Components/footer'
+import { useState } from 'react'
 
 function App() {
 
-  return (
-    <div>
-      <Navbar></Navbar>
-      <Cards place="Enter text"></Cards>
-      <Footer></Footer>
+  let [mode, setMode] = useState("light");
+  function toggleMode()
+  {
+    if(mode == 'light')
+    {
+      setMode('dark');
+      document.body.style.backgroundColor = 'grey';
+      document.body.style.color = 'white';
 
-    </div>
+    }
+    else
+    {
+      setMode('light');
+      document.body.style.backgroundColor = 'white';
+      document.body.style.color = 'black';
+
+    }
+  }
+  
+
+  return (
+    <>
+      <Navbar Mode={mode} ToggleMode={toggleMode}></Navbar>
+      <Cards Mode={mode}></Cards>
+      <Footer Mode={mode}></Footer>
+
+    </>
 
   )
 }
