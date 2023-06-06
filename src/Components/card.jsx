@@ -11,12 +11,14 @@ function Texts(Props) {
     function TransferUp() {
         let newText = text.toUpperCase();
         settext(newText);
+        Props.Alart("Text Converted into Uppercase","success")
 
     }
 
     function TransferLo() {
         let newText = text.toLowerCase();
         settext(newText);
+        Props.Alart("Text Converted into Lowercase","success")
 
     }
 
@@ -24,16 +26,21 @@ function Texts(Props) {
         let selectall = document.getElementById("textall");
         selectall.select();
         navigator.clipboard.writeText(selectall.value);
+        Props.Alart("Text Copied Successfully","success")
+
     }
 
     function spaceRemove() {
         let newText = text.split(/[ ]+/);
         settext(newText.join(" "));
+        Props.Alart("All Extra Spaces are Removed","success")
+
     }
 
     function ClearTxt() {
         let newText = "";
         settext(newText);
+        Props.Alart("Clear All Texts","danger")
 
     }
 
@@ -46,7 +53,7 @@ function Texts(Props) {
     return (
 
         <>
-            <div className="py-5">
+            <div className="py-3">
                 <div className='d-flex justify-content-center'>
                     <div className='w-75'>
                         <div className=''>
@@ -60,13 +67,12 @@ function Texts(Props) {
                                 <button className="btn btn-primary m-1" onClick={copyAll}>Copy Text</button>
                                 <button className="btn btn-primary m-1" onClick={spaceRemove}>Remove Extra Spaces</button>
                                 <button className="btn btn-primary m-1" onClick={ClearTxt}>Clear</button>
-
                             </div>
                         </div>
                         <div className='container'>
                             <h1>Summery</h1>
                             {/* <div>{text.split(" ").length - 1} words, {text.length} characters</div> */}
-                            <div>{text.split(" ").length} words, {text.length} characters</div>
+                            <div className='my-2'>{text.split(" ").length} words, {text.length} characters</div>
                             <div>{text.split(" ").length * 0.008} Reading Time</div>
                         </div>
                     </div>

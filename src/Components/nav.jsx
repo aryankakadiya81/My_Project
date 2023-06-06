@@ -3,11 +3,11 @@ function Navbar(Props) {
 
     return (
         <div>
-            <nav className={`navbar navbar-expand-lg bg-${Props.Mode == 'light' ? 'secondary' : 'dark'}`}>
+            <nav className={`navbar navbar-expand-lg fs-5 bg-${Props.Mode == 'light' ? 'secondary' : 'dark'}`}>
                 <div className="container-fluid">
-                    <a className={`navbar-brand text-light`} href="#">Navbar</a>
+                    <div><i class="bi bi-card-text text-white fs-1"></i></div>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                        <ul className="navbar-nav me-auto mb-2 mb-lg-0 ms-3">
                             <li className="nav-item">
                                 <a className={`nav-link active text-light`} aria-current="page" href="#">Home</a>
                             </li>
