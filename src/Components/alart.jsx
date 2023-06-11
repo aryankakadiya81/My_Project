@@ -5,9 +5,9 @@ function Alart(Props) {
         <>
             {
                 Props.Alart &&
-                <div className='d-flex justify-content-end'>
+                <div className='d-flex justify-content-end mx-5 my-3'>
                     <div className={`alert alert-${Props.Alart.type} alert-dismissible fade show w-25`} role="alert">
-                        <div>{Props.Alart.msg}</div>
+                        <div className=''>{Props.Alart.msg}</div>
                     </div>
                 </div>
             }

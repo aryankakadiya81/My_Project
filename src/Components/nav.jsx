@@ -1,18 +1,19 @@
-
+import { Link } from "react-router-dom";
 function Navbar(Props) {
 
     return (
-        <div>
+        <div className="w-100">
             <nav className={`navbar navbar-expand-lg fs-5 bg-${Props.Mode == 'light' ? 'secondary' : 'dark'}`}>
                 <div className="container-fluid">
-                    <div><i class="bi bi-card-text text-white fs-1"></i></div>
-                    <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div><i className="bi bi-card-text text-white fs-1"></i></div>
+                    <div className="collapse navbar-collapse " id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0 ms-3">
                             <li className="nav-item">
-                                <a className={`nav-link active text-light`} aria-current="page" href="#">Home</a>
+
+                                <Link className={`nav-link active text-light`} aria-current="page" to="/">Home</Link>
                             </li>
                             <li className="nav-item">
-                                <a className={`nav-link active text-light`} aria-current="page" href="#">About</a>
+                                <Link className={`nav-link active text-light`} aria-current="page" to="/About">About</Link>
                             </li>
                         </ul>
                         <i className={`bi bi-sun-fill fs-5 text-light`}></i>
@@ -32,4 +33,4 @@ function Navbar(Props) {
     )
 }
 
-export default Navbar
+export default Navbar;

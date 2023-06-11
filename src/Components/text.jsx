@@ -11,14 +11,14 @@ function Texts(Props) {
     function TransferUp() {
         let newText = text.toUpperCase();
         settext(newText);
-        Props.Alart("Text Converted into Uppercase","success")
+        Props.Alart("Text Converted into Uppercase", "success")
 
     }
 
     function TransferLo() {
         let newText = text.toLowerCase();
         settext(newText);
-        Props.Alart("Text Converted into Lowercase","success")
+        Props.Alart("Text Converted into Lowercase", "success")
 
     }
 
@@ -26,21 +26,21 @@ function Texts(Props) {
         let selectall = document.getElementById("textall");
         selectall.select();
         navigator.clipboard.writeText(selectall.value);
-        Props.Alart("Text Copied Successfully","success")
+        Props.Alart("Text Copied Successfully", "success")
 
     }
 
     function spaceRemove() {
         let newText = text.split(/[ ]+/);
         settext(newText.join(" "));
-        Props.Alart("All Extra Spaces are Removed","success")
+        Props.Alart("All Extra Spaces are Removed", "success")
 
     }
 
     function ClearTxt() {
         let newText = "";
         settext(newText);
-        Props.Alart("Clear All Texts","danger")
+        Props.Alart("Clear All Texts", "danger")
 
     }
 
@@ -60,7 +60,7 @@ function Texts(Props) {
                             <label htmlFor="exampleFormControlTextarea1" className="form-label fw-bold fs-1">
                                 Text
                             </label>
-                            <textarea className={`form-control fs-5`} style={{backgroundColor : (Props.Mode === 'dark'?'grey':'white'),color: Props.Mode == 'dark'?'white':'black'}} id="textall" rows={4} value={text} onChange={Changing} />
+                            <textarea className={`form-control fs-5`} style={{ backgroundColor: (Props.Mode === 'dark' ? 'grey' : 'white'), color: Props.Mode == 'dark' ? 'white' : 'black' }} id="textall" rows={4} value={text} onChange={Changing} />
                             <div className='my-3'>
                                 <button className="btn btn-primary m-1" onClick={TransferUp}>Upper Case</button>
                                 <button className="btn btn-primary m-1" onClick={TransferLo}>Lower Case</button>
