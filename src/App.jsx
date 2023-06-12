@@ -57,7 +57,7 @@ function App() {
         <Navbar Mode={mode} ToggleMode={toggleMode}></Navbar>
         <Alart Alart={alart}></Alart>
         <Routes>
-          <Route path='/' element={<Texts></Texts>}></Route>
+          <Route path='/' element={<Texts Mode={mode} Alart={showAlart}></Texts>}></Route>
           <Route path='/About' element={<About></About>}></Route>
         </Routes>
         <Footer Mode={mode}></Footer>

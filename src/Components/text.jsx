@@ -53,27 +53,27 @@ function Texts(Props) {
     return (
 
         <>
-            <div className="py-3">
-                <div className='d-flex justify-content-center'>
+            <div className="container">
+                <div className='d-flex justify-content-center mb-5'>
                     <div className='w-75'>
                         <div className=''>
                             <label htmlFor="exampleFormControlTextarea1" className="form-label fw-bold fs-1">
                                 Text
                             </label>
-                            <textarea className={`form-control fs-5`} style={{ backgroundColor: (Props.Mode === 'dark' ? 'grey' : 'white'), color: Props.Mode == 'dark' ? 'white' : 'black' }} id="textall" rows={4} value={text} onChange={Changing} />
+                            <textarea className={`form-control fs-5` } style={{ backgroundColor: (Props.Mode === 'dark' ? 'grey' : 'white'), color: Props.Mode == 'dark' ? 'white' : 'black' , cursor:'cell'}} id="textall" rows={4} value={text} onChange={Changing} />
                             <div className='my-3'>
-                                <button className="btn btn-primary m-1" onClick={TransferUp}>Upper Case</button>
-                                <button className="btn btn-primary m-1" onClick={TransferLo}>Lower Case</button>
-                                <button className="btn btn-primary m-1" onClick={copyAll}>Copy Text</button>
-                                <button className="btn btn-primary m-1" onClick={spaceRemove}>Remove Extra Spaces</button>
-                                <button className="btn btn-primary m-1" onClick={ClearTxt}>Clear</button>
+                                <button disabled={text.length == 0} className="btn btn-primary m-1" onClick={TransferUp}>Upper Case</button>
+                                <button disabled={text.length == 0} className="btn btn-primary m-1" onClick={TransferLo}>Lower Case</button>
+                                <button disabled={text.length == 0} className="btn btn-primary m-1" onClick={copyAll}>Copy Text</button>
+                                <button disabled={text.length == 0} className="btn btn-primary m-1" onClick={spaceRemove}>Remove Extra Spaces</button>
+                                <button disabled={text.length == 0} className="btn btn-primary m-1" onClick={ClearTxt}>Clear</button>
                             </div>
                         </div>
                         <div className='container'>
                             <h1>Summery</h1>
                             {/* <div>{text.split(" ").length - 1} words, {text.length} characters</div> */}
-                            <div className='my-2'>{text.split(" ").length} words, {text.length} characters</div>
-                            <div>{text.split(" ").length * 0.008} Reading Time</div>
+                            <div className='my-2'>{text.split(" ").filter((Element)=>{return Element.length!==0}).length} words, {text.length} characters</div>
+                            <div>{text.split(" ").filter((Element)=>{return Element.length!==0}).length * 0.008} Reading Time</div>
                         </div>
                     </div>
                 </div>

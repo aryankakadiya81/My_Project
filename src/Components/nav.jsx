@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 function Navbar(Props) {
 
     return (
-        <div className="w-100">
+        <div className="container w-100 fw-bold">
             <nav className={`navbar navbar-expand-lg fs-5 bg-${Props.Mode == 'light' ? 'secondary' : 'dark'}`}>
                 <div className="container-fluid">
                     <div><i className="bi bi-card-text text-white fs-1"></i></div>
