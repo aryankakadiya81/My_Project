@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 function Alart(Props) {
     return (
         <>
-            <div style={{height:"50px"}} className='container'>
+            <div style={{height:"50px"}} className='container mt-5 pt-4 '>
                 {
                     Props.Alart &&
                     <div className='d-flex justify-content-end'>

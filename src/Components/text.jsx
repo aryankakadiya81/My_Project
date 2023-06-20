@@ -53,7 +53,7 @@ function Texts(Props) {
     return (
 
         <>
-            <div className="container">
+            <div className="container mt-5">
                 <div className='d-flex justify-content-center mb-5'>
                     <div className='w-75'>
                         <div className=''>
