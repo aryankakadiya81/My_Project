@@ -3,7 +3,7 @@ function Navbar(Props) {
 
     return (
         <div className=" w-100 fw-bold">
-            <nav className={`navbar container navbar-expand-lg fs-5 fixed-top bg-${Props.Mode == 'light' ? 'secondary' : 'dark'}`}>
+            <nav className={`navbar container navbar-expand fs-5 fixed-top bg-${Props.Mode == 'light' ? 'secondary' : 'dark'}`}>
                 <div className="container-fluid">
                     <div><i className="bi bi-card-text text-white fs-1"></i></div>
                     <div className="collapse navbar-collapse " id="navbarSupportedContent">

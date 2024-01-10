@@ -1,19 +1,23 @@
-
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
+import { usePDF } from 'react-to-pdf';
 import React, { useState } from 'react';
 
 
 
 
 
+
 function Texts(Props) {
+    const { toPDF, targetRef } = usePDF({filename: 'Texttransform.pdf'});
     const [text, settext] = useState("");
+    
     function TransferUp() {
         let newText = text.toUpperCase();
         settext(newText);
         Props.Alart("Text Converted into Uppercase", "success")
 
     }
+    
 
     function TransferLo() {
         let newText = text.toLowerCase();
@@ -60,13 +64,14 @@ function Texts(Props) {
                             <label htmlFor="exampleFormControlTextarea1" className="form-label fw-bold fs-1">
                                 Text
                             </label>
-                            <textarea className={`form-control fs-5` } style={{ backgroundColor: (Props.Mode === 'dark' ? 'grey' : 'white'), color: Props.Mode == 'dark' ? 'white' : 'black' , cursor:'cell'}} id="textall" rows={4} value={text} onChange={Changing} />
+                            <textarea className={`form-control fs-5`} style={{ backgroundColor: (Props.Mode === 'dark' ? 'grey' : 'white'), color: Props.Mode == 'dark' ? 'white' : 'black' , cursor:'cell'}} id="textall" rows={4} value={text} onChange={Changing} ref={targetRef}/>
                             <div className='my-3'>
                                 <button disabled={text.length == 0} className="btn btn-primary m-1" onClick={TransferUp}>Upper Case</button>
                                 <button disabled={text.length == 0} className="btn btn-primary m-1" onClick={TransferLo}>Lower Case</button>
                                 <button disabled={text.length == 0} className="btn btn-primary m-1" onClick={copyAll}>Copy Text</button>
                                 <button disabled={text.length == 0} className="btn btn-primary m-1" onClick={spaceRemove}>Remove Extra Spaces</button>
                                 <button disabled={text.length == 0} className="btn btn-primary m-1" onClick={ClearTxt}>Clear</button>
+                                <button disabled={text.length == 0} className="btn btn-primary m-1" onClick={() => toPDF()}>Download in PDF</button>
                             </div>
                         </div>
                         <div className='container'>
