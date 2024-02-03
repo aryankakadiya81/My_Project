@@ -7,7 +7,7 @@ function footer(Props) {
                     <div className="container pt-3">
                         <div className="row">
                             <div className="col-md-12 copy my-1">
-                                <p className="text-center fw-bold">&copy; Copyright 2023 - Aryan Kakadiya. All rights reserved.</p>
+                                <p className="text-center fw-bold">&copy; Copyright 2024 - Aryan Kakadiya. All rights reserved.</p>
                             </div>
                         </div>
 
